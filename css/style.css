@@ -2,10 +2,13 @@
    1. VARIÁVEIS (Cores do Projeto)
    ========================================== */
 :root {
-    --primary-color: #3498db;   /* Azul claro */
-    --secondary-color: #2ecc71; /* Verde */
-    --bg-color: #f8fafc;
-    --text-color: #333333;
+    --primary-color: #2457a6;
+    --secondary-color: #2f8f6b;
+    --bg-color: #eef3f9;
+    --surface-color: #ffffff;
+    --text-color: #243041;
+    --muted-text-color: #5f6b7a;
+    --border-color: #d9e2ec;
 }
 
 /* ==========================================
@@ -23,7 +26,7 @@
    ========================================== */
 html, body {
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
@@ -34,13 +37,14 @@ body {
     flex-direction: column;
     height: 100vh; /* Ocupa 100% da altura da janela */
     overflow: hidden; /* Remove barra de rolagem da página principal (index) */
+    background-image: linear-gradient(180deg, #f7fbff 0%, var(--bg-color) 100%);
 }
 
 /* ==========================================
    4. CABEÇALHO E NAVEGAÇÃO
    ========================================== */
 header {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), #3a72c7);
     color: white;
     padding: 15px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Dá uma sombrinha elegante */
@@ -88,7 +92,7 @@ ul li a:hover {
 iframe {
     flex: 1; /* Estica o iframe para preencher o espaço entre o header e o footer */
     width: 100%;
-    background-color: #ffffff; /* Fundo branco para as páginas internas */
+    background-color: var(--surface-color); /* Fundo branco para as páginas internas */
 }
 
 /* ==========================================
@@ -100,6 +104,70 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
+}
+
+main {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0 32px;
+}
+
+section,
+article {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(36, 48, 65, 0.08);
+}
+
+section {
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+article {
+    padding: 20px;
+    margin-top: 16px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+p {
+    color: var(--muted-text-color);
+    line-height: 1.6;
+}
+
+body.pagina-interna header {
+    background: linear-gradient(135deg, #1f3f72, #2457a6);
+    text-align: center;
+}
+
+body.pagina-interna main {
+    padding-top: 28px;
+}
+
+body.pagina-interna .destino {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.pagina-interna .destino p,
+body.pagina-interna #introducao p {
+    max-width: 70ch;
 }
 
 /* ==========================================
@@ -116,6 +184,12 @@ footer {
     margin: 15px auto;     /* O 'auto' centraliza a imagem se ela for menor que o container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     display: block;
+}
+
+.imagem-destino:hover,
+.imagem-continente:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
 }
 
 /* Estilo para a imagem principal do continente */
@@ -138,4 +212,26 @@ footer {
     overflow: auto;
     display: block; /* Remove o comportamento flex que trava a tela */
     padding: 20px; /* Dá um respiro nas bordas do texto */
+}
+
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section,
+    article {
+        padding: 18px;
+    }
+
+    body.pagina-interna .destino {
+        text-align: left;
+        align-items: stretch;
+    }
 }
