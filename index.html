@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Volta ao Mundo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header class="topbar">
+        <nav class="container nav-bar">
+            <a href="pages/americas.html" target="conteudoFrame" class="brand">Volta ao Mundo</a>
+            <ul class="menu">
+                <li><a href="pages/americas.html" target="conteudoFrame">América</a></li>
+                <li><a href="pages/europa.html" target="conteudoFrame">Europa</a></li>
+                <li><a href="pages/asia.html" target="conteudoFrame">Ásia</a></li>
+                <li><a href="pages/africa.html" target="conteudoFrame">África</a></li>
+                <li><a href="pages/oceania.html" target="conteudoFrame">Oceania</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">Explore o mundo</span>
+                <h1>Escolha um continente e descubra novas histórias.</h1>
+                <p>Viaje pelas principais maravilhas do planeta e conheça destinos incríveis em cada lugar.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="frame-section">
+        <div class="container">
+            <iframe name="conteudoFrame" src="pages/home.html" title="Conteúdo por continente"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projeto Volta ao Mundo. Atividade de Desenvolvimento Web.</p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
