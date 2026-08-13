@@ -105,22 +105,37 @@ footer {
 /* ==========================================
    7. IMAGENS DAS PÁGINAS INTERNAS (Europa, etc)
    ========================================== */
+
+/* Estilo para as imagens dos destinos (Paris, Roma, etc.) */
 .imagem-destino {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 450px;      /* Limita a largura máxima */
+    max-height: 260px;     /* Limita a altura máxima para não esticar */
+    object-fit: cover;     /* Ajusta a foto sem distorcer/achatar */
     border-radius: 8px;
-    margin: 12px 0;
+    margin: 15px auto;     /* O 'auto' centraliza a imagem se ela for menor que o container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     display: block;
 }
 
+/* Estilo para a imagem principal do continente */
 .imagem-continente {
     width: 100%;
-    max-width: 800px; /* Um pouco maior que as imagens dos destinos */
-    height: auto;
+    max-width: 650px;      /* Limita a largura máxima */
+    max-height: 350px;     /* Limita a altura máxima */
+    object-fit: cover;     /* Mantém a proporção perfeita */
     border-radius: 12px;
-    margin: 20px 0;
+    margin: 20px auto;     /* Centraliza a imagem na tela */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     display: block;
+}
+
+/* ==========================================
+   8. PÁGINAS INTERNAS (Europa, América, etc)
+   ========================================== */
+.pagina-interna {
+    height: auto;
+    overflow: auto;
+    display: block; /* Remove o comportamento flex que trava a tela */
+    padding: 20px; /* Dá um respiro nas bordas do texto */
 }
