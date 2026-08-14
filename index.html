@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volta ao Mundo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>index</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="topbar">
-        <nav class="container nav-bar">
-            <a href="pages/americas.html" target="conteudoFrame" class="brand">Volta ao Mundo</a>
-            <ul class="menu">
+    <header>
+        <nav>
+            <a href="pages/home.html" target="conteudoFrame">Volta ao Mundo</a>
+            <ul>
                 <li><a href="pages/americas.html" target="conteudoFrame">América</a></li>
                 <li><a href="pages/europa.html" target="conteudoFrame">Europa</a></li>
                 <li><a href="pages/asia.html" target="conteudoFrame">Ásia</a></li>
@@ -22,27 +20,13 @@
             </ul>
         </nav>
     </header>
-
-    <main class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <span class="badge">Explore o mundo</span>
-                <h1>Escolha um continente e descubra novas histórias.</h1>
-                <p>Viaje pelas principais maravilhas do planeta e conheça destinos incríveis em cada lugar.</p>
-            </div>
-        </div>
-    </main>
-
-    <section class="frame-section">
-        <div class="container">
-            <iframe name="conteudoFrame" src="pages/home.html" title="Conteúdo por continente"></iframe>
-        </div>
-    </section>
+    <iframe name="conteudoFrame" src="pages/home.html" frameborder="0"></iframe>
+    <!-- <iframe src="/" frameborder="0"></iframe> -->
 
     <footer>
         <p>&copy; 2026 Projeto Volta ao Mundo. Atividade de Desenvolvimento Web.</p>
     </footer>
-
+    
     <script src="js/script.js"></script>
 </body>
 </html>
