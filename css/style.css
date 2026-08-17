@@ -2,13 +2,14 @@
    1. VARIÁVEIS (Cores do Projeto)
    ========================================== */
 :root {
-    --primary-color: #2457a6;
-    --secondary-color: #2f8f6b;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
     --bg-color: #eef3f9;
     --surface-color: #ffffff;
     --text-color: #243041;
     --muted-text-color: #5f6b7a;
     --border-color: #d9e2ec;
+    --text-secondary: #555555;
 }
 
 /* ==========================================
@@ -21,203 +22,26 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --background-color: #f5f7fa;
-    --card-color: #ffffff;
-    --text-color: #2c3e50;
-    --text-secondary: #555555;
-}
-
 /* =========================
    CONFIGURAÇÕES GERAIS
    ========================= */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    overflow: hidden; /* Remove barra de rolagem da página principal (index) */
+    background-image: linear-gradient(180deg, #f7fbff 0%, var(--bg-color) 100%);
 }
 
 
-/* =========================
-   PÁGINA DA ÁSIA
-   ========================= */
-
-.pagina-asia {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 30px;
-}
-
-
-/* =========================
-   INTRODUÇÃO
-   ========================= */
-
-.pagina-asia .introducao {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.pagina-asia .introducao h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-}
-
-.pagina-asia .introducao p {
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 18px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-
-/* =========================
-   TÍTULO DOS MONUMENTOS
-   ========================= */
-
-.pagina-asia .monumentos h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 35px;
-    color: var(--text-color);
-}
-
-
-/* =========================
-   CARDS
-   ========================= */
-
-.pagina-asia .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-
-/* =========================
-   CARD INDIVIDUAL
-   ========================= */
-
-.pagina-asia .card {
-    background-color: var(--card-color);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pagina-asia .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-
-/* =========================
-   IMAGENS
-   ========================= */
-
-.pagina-asia .card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
-
-
-/* =========================
-   CONTEÚDO DO CARD
-   ========================= */
-
-.pagina-asia .card-conteudo {
-    padding: 22px;
-}
-
-.pagina-asia .card-conteudo h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
-    color: var(--primary-color);
-}
-
-.pagina-asia .card-conteudo p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
-}
-
-.pagina-asia .card-conteudo strong {
-    color: var(--text-color);
-}
-
-
-/* =========================
-   RESPONSIVIDADE
-   ========================= */
-
-@media (max-width: 768px) {
-
-    .pagina-asia {
-        padding: 30px 20px;
-    }
-
-    .pagina-asia .introducao h1 {
-        font-size: 38px;
-    }
-
-    .pagina-asia .introducao p {
-        font-size: 16px;
-    }
-
-    .pagina-asia .monumentos h2 {
-        font-size: 28px;
-    }
-
-    .pagina-asia .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .pagina-asia .card img {
-        height: 280px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .pagina-asia {
-        padding: 20px 15px;
-    }
-
-    .pagina-asia .introducao h1 {
-        font-size: 32px;
-    }
-
-    .pagina-asia .monumentos h2 {
-        font-size: 24px;
-    }
-
-    .pagina-asia .card img {
-        height: 230px;
-    }
-
-    .pagina-asia .card-conteudo {
-        padding: 18px;
-    }
-
-    .pagina-asia .card-conteudo h3 {
-        font-size: 21px;
-    }
-
-}
 
 /* ==========================================
-   3. ESTRUTURA BASE (Para o Iframe e Footer)
+   ESTRUTURA BASE (Para o Iframe e Footer)
    ========================================== */
 html, body {
     height: 100%;
@@ -226,14 +50,7 @@ html, body {
     color: var(--text-color);
 }
 
-/* Transformamos o body em flexbox para gerenciar o tamanho da tela */
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ocupa 100% da altura da janela */
-    overflow: hidden; /* Remove barra de rolagem da página principal (index) */
-    background-image: linear-gradient(180deg, #f7fbff 0%, var(--bg-color) 100%);
-}
+
 
 /* ==========================================
    4. CABEÇALHO E NAVEGAÇÃO
@@ -344,13 +161,21 @@ p {
     line-height: 1.6;
 }
 
-body.pagina-interna header {
+.pagina-interna header {
     background: linear-gradient(135deg, #1f3f72, #2457a6);
     text-align: center;
+    border-radius: 15px
 }
 
-body.pagina-interna main {
+.pagina-interna main {
     padding-top: 28px;
+    
+}
+
+.pagina-interna main .introducao{
+
+    text-align: center;
+
 }
 
 body.pagina-interna .destino {
@@ -360,10 +185,7 @@ body.pagina-interna .destino {
     text-align: center;
 }
 
-body.pagina-interna .destino p,
-body.pagina-interna #introducao p {
-    max-width: 70ch;
-}
+
 
 /* ==========================================
    7. IMAGENS DAS PÁGINAS INTERNAS (Europa, etc)
