@@ -54,13 +54,17 @@
    ========================= */
 
 .pagina-oceania .cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
   margin-bottom: 40px;
+  align-items: stretch;
 }
 
 .pagina-oceania .card {
+  display: block;
+  width: 100%;
+  min-width: 0;
   background-color: var(--surface-color);
   border-radius: 12px;
   overflow: hidden;
@@ -81,9 +85,12 @@
 
 .pagina-oceania .card img {
   width: 100%;
+  max-width: none;
   height: 300px;
   object-fit: cover;
   display: block;
+  margin: 0;
+  border-radius: 0;
 }
 
 /* =========================
