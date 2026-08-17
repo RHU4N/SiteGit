@@ -1,0 +1,161 @@
+/* =========================
+   PÁGINA DA OCEANIA
+   ========================= */
+
+.pagina-oceania {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+/* =========================
+   INTRODUÇÃO - Oceania
+   ========================= */
+
+.pagina-oceania .introducao {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pagina-oceania .introducao h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.pagina-oceania .introducao p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* =========================
+   TÍTULO DOS MONUMENTOS - Oceania
+   ========================= */
+
+.pagina-oceania .monumentos h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: var(--text-color);
+}
+
+/* =========================
+   CARDS - Oceania
+   ========================= */
+
+.pagina-oceania .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.pagina-oceania .card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pagina-oceania .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   IMAGENS - Oceania
+   ========================= */
+
+.pagina-oceania .card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   CONTEÚDO DO CARD - Oceania
+   ========================= */
+
+.pagina-oceania .card-conteudo {
+  padding: 22px;
+}
+
+.pagina-oceania .card-conteudo h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.pagina-oceania .card-conteudo p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.pagina-oceania .card-conteudo strong {
+  color: var(--text-color);
+}
+
+/* =========================
+   RESPONSIVIDADE - Oceania
+   ========================= */
+
+@media (max-width: 768px) {
+  .pagina-oceania {
+    padding: 30px 20px;
+  }
+
+  .pagina-oceania .introducao h2 {
+    font-size: 34px;
+  }
+
+  .pagina-oceania .introducao p {
+    font-size: 16px;
+  }
+
+  .pagina-oceania .monumentos h2 {
+    font-size: 28px;
+  }
+
+  .pagina-oceania .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-oceania .card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagina-oceania {
+    padding: 20px 15px;
+  }
+
+  .pagina-oceania .introducao h2 {
+    font-size: 28px;
+  }
+
+  .pagina-oceania .monumentos h2 {
+    font-size: 24px;
+  }
+
+  .pagina-oceania .card img {
+    height: 230px;
+  }
+
+  .pagina-oceania .card-conteudo {
+    padding: 18px;
+  }
+
+  .pagina-oceania .card-conteudo h3 {
+    font-size: 21px;
+  }
+}
